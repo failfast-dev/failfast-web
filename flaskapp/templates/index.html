@@ -4,20 +4,14 @@
   <meta charset="UTF-8">
   <title>Bjorøy failfast</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      background-color: #040603;
-      display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
       overflow: hidden;
       position: relative;
       text-align: center;
-      font-family: sans-serif;
     }
 
     .spiral {
@@ -82,51 +76,36 @@
     }
 
     .button-container {
-  display: flex;
-  gap: 16px;
-  margin-top: 32px;
-  z-index: 2;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.cta {
-  padding: 12px 24px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-
-.cta.primary {
-  border: 2px solid white;
-  color: white;
-  background-color: transparent;
-}
-
-.cta.primary:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.cta.secondary {
-  border: 2px solid white;
-  color: white;
-  background-color: transparent;
-}
-
-.cta.secondary:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-
-    .cta-button:hover {
-      background-color: #e85c00;
+      display: flex;
+      gap: 16px;
+      margin-top: 32px;
+      z-index: 2;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
-    /* 📱 Mobiljustering */
-    @media (max-width: 768px) 
-    {
+    .cta {
+      padding: 12px 24px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .cta.primary,
+    .cta.secondary {
+      border: 2px solid white;
+      color: white;
+      background-color: transparent;
+    }
+
+    .cta.primary:hover,
+    .cta.secondary:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    @media (max-width: 768px) {
       body {
         justify-content: flex-start;
         padding-top: 16vh;
@@ -150,7 +129,7 @@
         top: 11%;
         left: 85%;
       }
-    
+
       .cta {
         font-size: 0.9rem;
         padding: 10px 16px;
@@ -161,42 +140,28 @@
         align-items: center;
         gap: 12px;
       }
-      
-  }
+    }
   </style>
 </head>
 <body>
-
-  <!-- Spiralen -->
   <img src="{{ url_for('static', filename='images/spiral_2.png') }}" alt="Spiral" class="spiral">
-
-  <!-- Logo -->
   <img src="{{ url_for('static', filename='images/logo_bjoroy_failfast_transparent.png') }}" alt="Bjorøy failfast logo" class="logo">
-
-  <!-- Tagline -->
   <div class="tagline">LEARN FAST. BUILD.</div>
 
-  <!-- Knapper -->
   <div class="button-container">
-    <!-- Primary CTA – Om meg -->
     <a href="{{ url_for('about') }}" class="cta primary">
       <span>Om meg</span>
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-           viewBox="0 0 16 16" style="margin-left: 6px;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-left: 6px;">
         <path d="M6 3a1 1 0 0 0 0 2h4.586L3 12.586a1 1 0 0 0 1.414 1.414L12 6.414V11a1 1 0 1 0 2 0V4a1 1 0 0 0-1-1H6z"/>
       </svg>
     </a>
-  
-    <!-- Secondary CTA – CV -->
+
     <a href="{{ url_for('cv') }}" class="cta secondary">
       <span>CV</span>
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-           viewBox="0 0 16 16" style="margin-left: 6px;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-left: 6px;">
         <path d="M6 3a1 1 0 0 0 0 2h4.586L3 12.586a1 1 0 0 0 1.414 1.414L12 6.414V11a1 1 0 1 0 2 0V4a1 1 0 0 0-1-1H6z"/>
       </svg>
     </a>
   </div>
-  
-  
 </body>
 </html>

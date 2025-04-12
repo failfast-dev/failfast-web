@@ -1,74 +1,25 @@
-<!DOCTYPE html>
-<html lang="no">
-<head>
-  <meta charset="UTF-8">
-  <title>Om meg – Bjorøy failfast</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      background-color: #040603;
-      color: white;
-      font-family: sans-serif;
-      margin: 0;
-      padding: 4rem 2rem;
-      position: relative;
-    }
+{% extends "base.html" %}
 
-    .spiral {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 100px;
-      height: auto;
-      opacity: 0.3;
-      pointer-events: none;
-    }
+{% block title %}Om meg – Bjorøy failfast{% endblock %}
 
-    .content {
-      max-width: 800px;
-      margin: 0 auto;
-    }
+{% block content %}
+<div class="main-content">
+  <a href="{{ url_for('home') }}" class="back-link">&larr; Tilbake til forsiden</a>
+  <h1>Om meg</h1>
+  <p><strong>Fra blyant til interaktiv prompting.</strong></p>
 
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
+  <p>Jeg tok eksamen i C# med blyant og papir i 2001. Det drepte interessen min for programmering i mange år. Alt føltes tungt, rigid og teknisk for teknikkens skyld.</p>
 
-    p {
-      line-height: 1.6;
-      margin-bottom: 1.2rem;
-    }
+  <p>I stedet fulgte jeg en vei gjennom elektronikk, musikk og humaniora. Jeg har alltid vært glad i logikk og struktur, men også språk og idé. Det var bare aldri noe sted de fikk spille sammen.</p>
 
-    a.back-link {
-      display: inline-block;
-      margin-top: 2rem;
-      color: #ff6f00;
-      text-decoration: none;
-    }
-  </style>
-</head>
-<body>
-  <img src="{{ url_for('static', filename='images/spiral_2.png') }}" alt="Spiral" class="spiral">
+  <p>Det har endret seg nå.</p>
 
-  <div class="content">
-    <a href="{{ url_for('home') }}">← Tilbake til forsiden</a>
-    <h1>Om meg</h1>
-    <p><strong>Fra blyant til interaktiv prompting.</strong></p>
+  <p>Med KI og språkmodeller har programmering blitt noe annet. Noe jeg kjenner meg igjen i. Å formulere ideer som blir til funksjon. Å tenke med systemet, ikke bare inni det.</p>
 
-    <p>Jeg tok eksamen i C# med blyant og papir i 2001. Det drepte interessen min for programmering i mange år. Alt føltes tungt, rigid og teknisk for teknikkens skyld.</p>
+  <p>Jeg kaller det <em>interaktiv prompt mastery</em>. Det handler ikke om å "snakke med KI", men om å jobbe i samspill.  
+  Jeg bruker KI som samarbeidspartner – til å utvikle, teste, lære og bygge. Ikke som et verktøy, men som en slags kollega.</p>
 
-    <p>I stedet fulgte jeg en vei gjennom elektronikk, musikk og humaniora. Jeg har alltid vært glad i logikk og struktur, men også språk og idé. Det var bare aldri noe sted de fikk spille sammen.</p>
-
-    <p>Det har endret seg nå.</p>
-
-    <p>Med KI og språkmodeller har programmering blitt noe annet. Noe jeg kjenner meg igjen i. Å formulere ideer som blir til funksjon. Å tenke med systemet, ikke bare inni det.</p>
-
-    <p>Jeg kaller det <em>interaktiv prompt mastery</em>. Det handler ikke om å “snakke med KI”, men om å jobbe i samspill.  
-    Jeg bruker KI som samarbeidspartner – til å utvikle, teste, lære og bygge. Ikke som et verktøy, men som en slags kollega.</p>
-
-    <p><strong>Bjorøy failfast</strong> er mitt studio og min lekeplass.  
-    Her bygger jeg, lærer fort, og hjelper andre med å gjøre det samme.</p>
-
-  </div>
-</body>
-</html>
+  <p><strong>Bjorøy failfast</strong> er mitt studio og min lekeplass.  
+  Her bygger jeg, lærer fort, og hjelper andre med å gjøre det samme.</p>
+</div>
+{% endblock %}

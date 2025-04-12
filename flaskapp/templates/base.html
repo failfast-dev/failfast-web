@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Bjorøy failfast{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}?v=3">
+</head>
+<body>
+  <div class="page-wrapper">
+    {% block content %}{% endblock %}
+
+    <footer>
+      <a href="https://github.com/failfast-dev/failfast-web" target="_blank" class="github-link">
+        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+             alt="GitHub-logo" width="16" height="16">
+        Se kildekoden på GitHub
+      </a>
+    </footer>
+  </div>
+</body>
+</html>
