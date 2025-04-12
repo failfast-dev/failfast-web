@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <title>CV – Karl-Magnus Bjorøy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #040603;
+      color: white;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 4rem 2rem;
+      position: relative;
+    }
+
+    .spiral {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 100px;
+      height: auto;
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
+      margin-bottom: 1rem;
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
+    }
+
+    blockquote {
+      font-style: italic;
+      color: #ccc;
+      margin: 1rem 0;
+    }
+
+    a {
+      color: #ff6f00;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <img src="{{ url_for('static', filename='images/spiral_2.png') }}" alt="Spiral" class="spiral">
+
+  <div class="content">
+    <a href="{{ url_for('home') }}">← Tilbake til forsiden</a>
+
+    <h1>👨‍💻 Teknologisk profil – Karl-Magnus Bjorøy</h1>
+
+    <blockquote>
+      Engasjert, tverrfaglig og selvdrevet. Jeg bygger broer mellom teknologi, samfunn og mennesker.
+    </blockquote>
+
+    <h2>🧭 Profil og mål</h2>
+    <p>Jeg er i en omskoleringsfase med mål om å etablere meg i en teknisk rolle – som utvikler, funksjonell utvikler eller brobygger mellom mennesker og teknologi. Min bakgrunn fra både offentlig sektor, teknisk arbeid og samfunnsvitenskap gir meg et unikt perspektiv på hvordan systemer fungerer – både teknisk, organisatorisk og menneskelig.</p>
+    <p>Jeg liker å forstå og forbedre systemer, og drives av å forenkle, frigjøre og bygge broer. På kort sikt bygger jeg en portefølje gjennom prosjekter og kurs, mens jeg på lengre sikt ønsker å bidra til meningsfulle løsninger – og kanskje drive egen virksomhet.</p>
+
+    <h2>🎓 Utdanning og kurs</h2>
+    <h3>Teknologiske og praktiske kurs:</h3>
+    <ul>
+      <li>2024–dd – Python (Brilliant.org), CS50 Computer Science (HarvardX)</li>
+      <li>2023 – Microkurs i SQL (edX)</li>
+      <li>2000–2001 – Objektorientert programmering, systemutvikling og prosjektstyring (30sp, NKI)</li>
+      <li>1998–2003 – Kurs i datakommunikasjon, Microsoft-servere, Crystal Reports</li>
+      <li>1994 – Fagbrev i elektronikk, Bergen maritime videregående skole</li>
+    </ul>
+
+    <h3>Høyere utdanning:</h3>
+    <ul>
+      <li>2022 – UiO – Samfunnsvitenskapelig metode (7,5 sp)</li>
+      <li>2010–2012 – MA i kultur og samfunnsfag, UiO<br><em>Musikksosiologi og teknologi</em></li>
+      <li>2010 – Moderne sosiologisk teori (20 sp)</li>
+      <li>2008–2009 – BI Oslo – Bedriftsøkonomi 1 (12 sp)</li>
+      <li>2006–2009 – BA i kultur- og samfunnsfag, UiO</li>
+    </ul>
+
+    <h2>🛠 Omskolering og pågående prosjekter (2024–)</h2>
+    <ul>
+      <li><strong>Lokal webserver med Flask og API-integrasjon</strong><br>Bygget med Raspberry Pi og Python. Lærer REST-struktur, JSON-håndtering og frontendvisning.</li>
+      <li><strong>Trading-bot for krypto på Raspberry Pi</strong><br>Eksperimenterer med automatisering, cron-jobber og API-håndtering.</li>
+      <li><strong>CS50's Introduction to Computer Science (HarvardX)</strong><br>Grunnleggende CS-kunnskap med fokus på algoritmer, datastrukturer og programmeringslogikk.</li>
+      <li><strong>ENK: Bjorøy failfast – egen virksomhet og profilbygging</strong><br>Etablerte ENK for teknologiutvikling, interaktiv prompting og fremtidige tjenester.</li>
+      <li><strong>Portefølje og nettside – failfast.no</strong><br>Under utvikling. Inneholder CV, prosjektdemoer og refleksjoner.</li>
+    </ul>
+
+    <h2>💼 Teknologisk arbeidserfaring</h2>
+    <h3>🏛 Lånekassen (2010–dd)</h3>
+    <ul>
+      <li>Funksjonell testressurs i utviklingsprosjekter</li>
+      <li>Regelmotor: oversetting av forskrifter og politikk til tekniske spesifikasjoner</li>
+      <li>Utarbeidelse av teknisk dokumentasjon (Wiki)</li>
+      <li>Deltakelse i utvikling av tiltak som 11 måneders studiestøtte og gradsomgjøring</li>
+      <li>Bruk av kvantitativ forskning som grunnlag for utviklingsarbeid</li>
+    </ul>
+
+    <h3>🏢 NETnet AS / Telebridge5 (1997–2005)</h3>
+    <ul>
+      <li>Programmering av telefonsentraler og installasjon av telerutere</li>
+      <li>Drift og vedlikehold av lokalt IT-nettverk</li>
+      <li>Prosjektledelse og testing i utvikling av CRM- og faktureringssystem</li>
+    </ul>
+
+    <h2>🧠 Kjernekompetanse og ferdigheter</h2>
+    <ul>
+      <li>Systemforståelse og logisk tenkning</li>
+      <li>Teknisk dokumentasjon, kravspesifikasjon og funksjonell testing</li>
+      <li>Tverrfaglig brobygging mellom juss, politikk og teknologi</li>
+      <li>Programmeringsforståelse (Python, Flask, Bash, SQL)</li>
+      <li>Erfaring med Raspberry Pi og automatisering</li>
+      <li>Effektiv bruk av AI-verktøy (ChatGPT, Copilot, NotebookLM)</li>
+      <li>Meget sterk formidlingsevne – både skriftlig og muntlig, norsk og engelsk</li>
+    </ul>
+
+    <h2>🙋‍♂️ Om meg</h2>
+    <p>Jeg er en nysgjerrig problemløser med evne til å se både helhet og detalj. Jeg trives best i skjæringspunktet mellom mennesker og teknologi, og bygger for forståelse og funksjon – ikke bare kode. Jeg lærer raskt, deler gjerne kunnskap, og har alltid hatt en trang til å skape: systemer, forklaringer og verktøy som gjør verden litt mer begripelig.</p>
+  </div>
+</body>
+</html>
